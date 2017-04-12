@@ -1,0 +1,1 @@
+optrcdmaeAT<-function(trt.N,col.N,theta,nrep,itr.cvrgval,Optcrit="",Alg="",...)UseMethod("optrcdmaeAT")
