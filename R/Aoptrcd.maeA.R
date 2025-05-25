@@ -98,7 +98,7 @@ Aoptrcd.maeA<-function(trt.N,col.N,theta,nrep,itr.cvrgval) {
   nb=best[1,1]
   Ascore<-best[1,2]
   Aoptde<- desbest.1[c((nb-1)*2+1,nb*2),]
-  tkmessageBox(title="Search completed",message=paste("Search completed",sep=""))
+  if(trt.N!=3) {tkmessageBox(title="Search completed",message=paste("Search completed",sep=""))}
   cnames=paste0("Ary",1:col.N)
   dimnames(Aoptde)=list(c("Dye 1:", "Dye 2:"),cnames)
   Aopt_sum2<-list("v"=trt.N,"b"=col.N,theta=theta,nrep=nrep,itr.cvrgval=itr.cvrgval, "OptdesF"=Aoptde,"Optcrtsv" =Ascore)

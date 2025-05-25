@@ -71,18 +71,18 @@ optrcdmaeAT.default<-function(trt.N,col.N,theta,nrep,itr.cvrgval,Optcrit="",Alg=
   #"======================================================================================"
   titleoptrcd<-list(c("      --------------------------------------- ",paste("Title: ",Optcrit,"-optimal or near-optimal row-column design          Date:", format(Sys.time(), "%a %b %d %Y %H:%M:%S"),sep=""),
                       "      --------------------------------------- "))
-  write.table(titleoptrcd, file = paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
+  write.table(titleoptrcd, file = file.path(tempdir(), paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = "")),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
   parcomb<-list(c("     Parametric combination:", "Number of treatments:", "Number of arrays:", 
                   "Theta value:", "Number of replications:","Number of exchange iteration:","Algorithm used:", "OPtimality criterion used:"," ","Design obtained:"),
                 c(" ",optrcd_mae$v,optrcd_mae$b,optrcd_mae$theta,optrcd_mae$nrep,optrcd_mae$itr.cvrgval,optrcd_mae$Alg,paste(Optcrit,"-optimality criterion",sep="")," "," "))
-  write.table(parcomb, file =  paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
+  write.table(parcomb, file =  file.path(tempdir(), paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = "")),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
   
   optde<-list("",cbind(c(" ", "Dye 1:", "Dye 2:"),rbind(paste0("Ary",1:optrcd_mae$b),optrcd_mae$OptdesF)))
-  write.table(optde, file =  paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
-  write.table(list(c("",paste(Optcrit,"-score value:",sep=""), "Equireplicate:",""),c("",optrcd_mae$Optcrtsv,optrcd_mae$equireplicate,"")), file =   paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
-  write.table(list(c("Treatment:", "Treatment replication:"),rbind(1:optrcd_mae$v,optrcd_mae$vtrtrep)), file =  paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
-  
-  optrcd_mae$file_loc<-paste(as.character(getwd()),  paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""),sep = "/")
+  write.table(optde, file = file.path(tempdir(), paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = "")),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
+  write.table(list(c("",paste(Optcrit,"-score value:",sep=""), "Equireplicate:",""),c("",optrcd_mae$Optcrtsv,optrcd_mae$equireplicate,"")), file =   file.path(tempdir(), paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = "")),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
+  write.table(list(c("Treatment:", "Treatment replication:"),rbind(1:optrcd_mae$v,optrcd_mae$vtrtrep)), file = file.path(tempdir(), paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = "")),append=T ,sep = ",", row.names=FALSE, col.names=FALSE)
+ 
+  optrcd_mae$file_loc<-file.path(tempdir(),  paste(Optcrit,"optrcd_",Alg,"_summary.csv",sep = ""))
   optrcd_mae$file_loc2<-paste("Summary of obtained ",Optcrit,"-optimal or near-optimal row-column design is also saved at:",sep="")
   #"======================================================================================"
   class(optrcd_mae)<-"optrcdmaeAT"

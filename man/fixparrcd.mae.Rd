@@ -32,10 +32,10 @@ The \code{fixparrcd.mae} function creates a pop-up tcltk window that allow the u
 the parametric combinations to compute optimal or near-optimal row-column designs.
 }
 \author{
-Legesse Kassa Debusho, Dibaba Bayisa Gemechu, and Linda Haines
+Dibaba Bayisa Gemechu, Legesse Kassa Debusho, and Linda Haines
 }
  
 \seealso{
-\code{\link{optrcdmaeAT}}, \code{\link{mmenurcd.mae}}, \code{\link{tcltk}}, \code{\link{TkWidgets}}
+\code{\link{optrcdmaeAT}}, \code{\link{mmenurcd.mae}}
 }
  

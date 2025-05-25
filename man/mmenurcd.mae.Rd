@@ -14,9 +14,9 @@ MV -, D- and E) for row-column designs that allows user to choose an optimality 
 will then call for a function \code{fixparrcd.mae} for further option regarding the setup of parametric combinations and output, see \code{fixparrcd.mae} documentation. 
 }
 \author{
-Legesse Kassa Debusho, Dibaba Bayisa Gemechu, and Linda Haines
+Dibaba Bayisa Gemechu, Legesse Kassa Debusho, and Linda Haines
 }
 
 \seealso{
-\code{\link{optrcdmaeAT}}, \code{\link{fixparrcd.mae}}, \code{\link{tcltk}}, \code{\link{TkWidgets}}
+\code{\link{optrcdmaeAT}}, \code{\link{fixparrcd.mae}}
 }

@@ -8,7 +8,7 @@
 Optimal row-column designs for two-colour cDNA microarray experiments
 }
 \description{
-Used to compute A-, MV-, D- or E-optimal or near-optimal row-column designs for two-colour cDNA microarray experiments under either the linear fixed effects model or the linear mixed effects model settings using either the array exchange or treatment exchange algorithms of Debusho, Gemechu and Haines (2016) after adjusting to the row-column setup.}
+Used to compute A-, MV-, D- or E-optimal or near-optimal row-column designs for two-colour cDNA microarray experiments under either the linear fixed effects model or the linear mixed effects model settings using either the array exchange or treatment exchange algorithms of Debusho, Gemechu and Haines (2018) <doi.org/10.1080/03610918.2018.1429617> after adjusting to the row-column setup.}
 \usage{
 optrcdmaeAT(trt.N, col.N, theta, nrep, itr.cvrgval, Optcrit = "", Alg = "", ...)
 
@@ -59,7 +59,7 @@ generated using the function \code{\link{intcrcd.mae}}.
 The minimum value of \code{trt.N} and \code{col.N} is 3 and \code{trt.N} should be less than or equal to \code{col.N}. 
 The linear fixed effects model results for given \code{trt.N} and \code{col.N} are obtained by setting \code{theta = 0.0}.
 
-\code{Alg} specifies the array exchange and treatment exchange algorithm to be used that is adopted from Debusho, Gemechu and Haines (2016)   after adjusting for the row-column designs setup. If \code{Alg =} \code{"trtE"}, the function 
+\code{Alg} specifies the array exchange and treatment exchange algorithm to be used that is adopted from Debusho, Gemechu and Haines (2018)   after adjusting for the row-column designs setup. If \code{Alg =} \code{"trtE"}, the function 
 \code{optrcdmaeAT} perform  the treatment exchange procedure through deletion and addition of treatments at a time and selects a 
 design with best treatment exchange with respect to the optimality criterion value. If \code{Alg =} \code{"arrayE"}, the function 
 \code{optrcdmaeAT} perform the array exchange procedure through deletion and addition of candidate arrays at a time and selects a 
@@ -115,14 +115,14 @@ GUI tcltk window can be used to generate optimal or near-optimal row-column desi
 
 }
 \references{
-Debusho, L. K., Gemechu, D. B., and Haines, L. M. (2016).  Algorithmic construction of optimal row-column designs for two-colour cDNA microarray experiments using the linear mixed model. Under review.
+Debusho, L. K., Gemechu, D. B. and Haines, L. (2018). Algorithmic construction of optimal block designs for two-colour cDNA microarray experiments using the linear mixed effects model. \emph{Communications in Statistics - Simulation and Computation, https://doi.org/10.1080/03610918.2018.1429617}.
 
 Gemechu, D. B., Debusho, L. K., and Haines, L. M. (2014). A-optimal designs for two-colour cDNA microarray experiments using the linear mixed effects model. \emph{Peer-reviewed Proceedings of the Annual Conference of the South African Statistical Association for 2014 (SASA 2014), Rhodes University, Grahamstown, South Africa}. pp 33-40, ISBN: 978-1-86822-659-7.
 
 Gemechu, D. B., Debusho, L. K., and Haines, L. M. (2015). A-and D-optional row-column designs for two-colour cDNA microarray experiments using linear mixed effects models. \emph{South African Statistical Journal}, 49, 153-168.
 }
 \author{
-Legesse Kassa Debusho, Dibaba Bayisa Gemechu, and Linda Haines
+Dibaba Bayisa Gemechu, Legesse Kassa Debusho, and Linda Haines
 }
 \seealso{
 \code{\link{mmenurcd.mae}}, \code{\link{fixparrcd.mae}}, \code{\link{intcrcd.mae}}

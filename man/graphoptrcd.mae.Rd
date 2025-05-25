@@ -30,13 +30,13 @@ checkbox value.  It takes a value of zero or one. The default value of \code{cbV
 }
 }
 \details{
-Detail discussions  concerning the constructions of a graphs can be found in \code{\link{igraph}} R package.
+Detail discussions  concerning the constructions of a graphs can be found in \code{igraph} R package.
 }
 \value{
 Returns the graphical layout of the resultant optimal or near-optimal row-column design '\code{OptdesF}' on a separate pop-up window. Furthermore, the function  \code{graphoptrcd.mae} saves the graphical layout of the resultant optimal or near-optimal row-column design in .pdf format in a working subdirectory. 
 }
 \author{
-Legesse Kassa Debusho, Dibaba Bayisa Gemechu, and Linda Haines
+Dibaba Bayisa Gemechu, Legesse Kassa Debusho, and Linda Haines
 }
 \note{
 When closing a pop-up window for graphical layout of the resultant designs (Graph plot),  if  the window is closed by 
@@ -45,9 +45,7 @@ will occur in R console irrespective of what command is executed next. To resolv
 on "\code{close}" menu that is located at the top-left of the graph plot pop-up window when closing this window. 
  }
 
-\seealso{
-\code{\link{igraph}}
-}
+
 \examples{
     ##To create the graphical layout of the D-optimal row-column design
     ##obtained using the treatment exchange algorithm for 
